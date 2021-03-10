@@ -642,7 +642,7 @@ class BinanceSocketManager(threading.Thread):
         # Get the user listen key
         user_listen_key = self._client.stream_get_listen_key()
         # and start the socket with this specific key
-        return self._start_account_socket('user', user_listen_key, callback)
+        return self._start_account_socket('userData', user_listen_key, callback)
 
     def start_margin_socket(self, callback):
         """Start a websocket for cross-margin data
